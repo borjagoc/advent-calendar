@@ -1,3 +1,5 @@
+require 'pry'
+
 @reports = []
 
 File.foreach('2024/day_2/day_2_input.txt') do |line|
@@ -33,6 +35,7 @@ def safe?(report, error_tolerance = false)
 
   if error_tolerance
     numbers.each_with_index do |_, index|
+      binding.pry
       modified_numbers = numbers.dup
       modified_numbers.delete_at(index)
       return true if sequence_safe?(modified_numbers)
