@@ -84,7 +84,6 @@ def matches_x_mas?(row_index, col_index)
   row_count = matrix.row_count
   col_count = matrix.column_count
 
-  # Check bounds and construct diagonals safely
   diagonal_1 = [
     (matrix[row_index - 1, col_index - 1] if row_index - 1 >= 0 && col_index - 1 >= 0),
     matrix[row_index, col_index],
