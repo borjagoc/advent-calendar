@@ -9,7 +9,7 @@ def matrix
   File.foreach('2024/day_4/day_4_input.txt') do |line|
     arrays << line.chomp.chars
   end
-  matrix = Matrix[*arrays]
+  Matrix[*arrays]
 end
 
 def find_word_in_rows
